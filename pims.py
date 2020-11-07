@@ -15,7 +15,7 @@ class Person:
         self.personality = {
             "openness": 0,
             "conscientiousness": 0,
-            "extraversion": 0,
+            "extroversion": 0,
             "agreeableness": 0,
             "neuroticism": 0
         }
@@ -42,5 +42,4 @@ def make_person():
         x.personality[trait] = random.randint(0, 10)
     for trait in x.work_ethic.keys():
         x.work_ethic[trait] = random.randint(0, 5)
-
     return x
