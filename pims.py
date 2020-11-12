@@ -41,5 +41,5 @@ def make_person():
     for trait in x.personality.keys():
         x.personality[trait] = random.randint(0, 10)
     for trait in x.work_ethic.keys():
-        x.work_ethic[trait] = random.randint(0, 5)
+        x.work_ethic[trait] = random.randint(1, 5)
     return x
