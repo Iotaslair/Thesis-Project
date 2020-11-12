@@ -12,17 +12,11 @@ for i in range(number_of_people_to_create):
 
 teams = itertools.combinations(people, team_size)
 
-best_team = []
-best_team_score = 10000
-
 best_team_dict = {}
 
 for team in teams:
     score = tester.test(team, team_size)
     best_team_dict[score] = team
-    if score < best_team_score:
-        best_team_score = score
-        best_team = team
 
 # Get out all scores, sort them, then use the best scores from the dict to print the teams
 # This is used to get the best teams
@@ -40,10 +34,3 @@ for i in range(3):
         team_string += str(person) + "\n"
     print("Score: " + str(scores[i]))
     print(team_string)
-
-# best_team_string = ""
-# for person in best_team:
-#     best_team_string += str(person) + "\n"
-#
-# print("Score of best team: " + str(best_team_score))
-# print("Most Compatible Team: \n" + best_team_string)
