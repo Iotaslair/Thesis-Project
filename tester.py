@@ -1,7 +1,6 @@
 def test(team, team_size):
     diff_from_theory_best_team = 0
-    # 0     1                  2      3           4
-    # Open, conscientiousness, extro, agreeable, neuroticism
+
     personality_perfect = {
         "openness": 7,
         "conscientiousness": 9,
@@ -10,8 +9,6 @@ def test(team, team_size):
         "neuroticism": 1
     }
 
-    # 0        1          2          3        4         5                    6
-    # central, self rely, hard work, leisure, morality, delay gratification, wasted time
     work_ethic_perfect = {
         "centrality of work": 2.5,
         "self reliance": 1.5,
@@ -21,12 +18,11 @@ def test(team, team_size):
         "delay of gratification": 3,
         "wasted time": 2.5
     }
-
-    # USE KEY, LIKE FOR KEY IN PERSON.PERSONALITY.KEYS TO GRAB ALL VALUES FOR EACH PERSON2
-
+    # Goes through each key in personality, gets the mean for this specific team and subtracts it from the perfect
+    # value for that trait
     for key in team[0].personality:
         diff_from_theory_best_team += abs(personality_perfect[key] - mean(team, key, None, team_size))
-
+    # Same as above with work ethic
     for key in team[0].work_ethic:
         diff_from_theory_best_team += abs(work_ethic_perfect[key] - mean(team, None, key, team_size))
 
