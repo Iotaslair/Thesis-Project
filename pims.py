@@ -36,6 +36,7 @@ class Person:
                "Work Ethic: " + str(self.work_ethic)
 
 
+# Creates a new person with random personality and work ethic traits
 def make_person():
     x = Person()
     for trait in x.personality.keys():
