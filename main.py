@@ -10,6 +10,7 @@ people = []
 for i in range(number_of_people_to_create):
     people.append(pims.make_random_person())
 
+# Creates all combinations of teams
 teams = itertools.combinations(people, team_size)
 
 best_team_dict = {}
