@@ -37,7 +37,7 @@ class Person:
 
 
 # Creates a new person with random personality and work ethic traits
-def make_person():
+def make_random_person():
     x = Person()
     for trait in x.personality.keys():
         x.personality[trait] = random.randint(0, 10)

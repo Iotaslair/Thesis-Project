@@ -8,7 +8,7 @@ team_size = 3
 people = []
 
 for i in range(number_of_people_to_create):
-    people.append(pims.make_person())
+    people.append(pims.make_random_person())
 
 teams = itertools.combinations(people, team_size)
 
