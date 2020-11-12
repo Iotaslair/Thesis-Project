@@ -31,9 +31,19 @@ for score in best_team_dict:
     scores.append(score)
 scores = sorted(scores)
 
-best_team_string = ""
-for person in best_team:
-    best_team_string += str(person) + "\n"
+print("A lower score is better because it is considered to be closer to the perfect team")
+print("A score of 0 is considered to be the perfect team")
+for i in range(3):
+    print("Team # " + str(i + 1))
+    team_string = ""
+    for person in best_team_dict[scores[i]]:
+        team_string += str(person) + "\n"
+    print("Score: " + str(scores[i]))
+    print(team_string)
 
-print("Score of best team: " + str(best_team_score))
-print("Most Compatible Team: \n" + best_team_string)
+# best_team_string = ""
+# for person in best_team:
+#     best_team_string += str(person) + "\n"
+#
+# print("Score of best team: " + str(best_team_score))
+# print("Most Compatible Team: \n" + best_team_string)
