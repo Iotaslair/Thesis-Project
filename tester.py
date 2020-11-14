@@ -42,3 +42,31 @@ def mean(team, p_trait, w_trait, team_size):
         for person in team:
             value += person.work_ethic[w_trait]
         return value / team_size
+
+
+# Idea for this test is to have it where there is a ton of if statements that check if teams have these certain things
+# Like 1 Extrovert and 1 introvert
+def test_rules(team):
+    tests_failed = 0
+    # Tests that 20-40% extroverts are on this team
+    extro_count = 0
+    intro_count = 0
+    for person in team:
+        if person.personality["extroversion"] > 5:
+            extro_count += 1
+        if person.personality["extroversion"] <= 5:
+            intro_count += 1
+    # This line tests that the value is between .2 and .4
+    if .2 <= extro_count / (intro_count + extro_count) <= .4:
+        pass
+    else:
+        tests_failed += 1
+
+    # Tests that everyone is high in Conscientiousness
+    # Really limits my possibilities for teams
+    for person in team:
+        if person.personality["conscientiousness"] < 6:
+            tests_failed += 1
+        else:
+            pass
+    return tests_failed
