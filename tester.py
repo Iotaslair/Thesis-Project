@@ -1,4 +1,4 @@
-def test(team, team_size):
+def test_mean(team, team_size):
     diff_from_theory_best_team = 0
 
     personality_perfect = {

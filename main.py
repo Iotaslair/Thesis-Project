@@ -15,6 +15,7 @@ teams = itertools.combinations(people, team_size)
 
 best_team_dict = {}
 
+    score = tester.test_mean(team, team_size)
 # Tests the teams and stores the scores in a dictionary {score, team}
 for team in teams:
     score = tester.test(team, team_size)
