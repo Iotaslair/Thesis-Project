@@ -49,6 +49,7 @@ def mean(team, p_trait, w_trait, team_size):
 def test_rules(team):
     tests_failed = 0
     # Tests that 20-40% extroverts are on this team
+    # Came from: Composition, Process, and Performance in Self-Managed Groups: The Role of Personality
     extro_count = 0
     intro_count = 0
     for person in team:
@@ -64,13 +65,18 @@ def test_rules(team):
 
     # Tests that everyone is high in Conscientiousness
     # Really limits my possibilities for teams
+    # Came from: Conscientiousness and Performance of Sales Representatives: Test of the
+    # Mediating Effects of Goal Setting
+    # and The Big Five Personality Dimensions and Job Performance: A Meta-Analysis
     for person in team:
         if person.personality["conscientiousness"] < 6:
             tests_failed += 1
+            break
         else:
             pass
 
     # Tests that people have low Neuroticism
+    # Came from: The Big Five Personality Dimensions and Job Performance: A Meta-Analysis
     for person in team:
         if person.personality["neuroticism"] < 4:
             tests_failed += 1
