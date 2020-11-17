@@ -69,4 +69,13 @@ def test_rules(team):
             tests_failed += 1
         else:
             pass
+
+    # Tests that people have low Neuroticism
+    for person in team:
+        if person.personality["neuroticism"] < 4:
+            tests_failed += 1
+            break
+        else:
+            pass
+
     return tests_failed
