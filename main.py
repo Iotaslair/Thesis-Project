@@ -44,19 +44,19 @@ best_team_dict = {}
 
 # Rules testing
 
-for team in teams:
-    result = tester.test_rules(team)
-    if result == 0:
-        print(result)
-        team_string = ""
-        for person in team:
-            team_string += str(person) + "\n"
-        print(team_string)
+# for team in teams:
+#     result = tester.test_rules(team)
+#     if result == 0:
+#         print(result)
+#         team_string = ""
+#         for person in team:
+#             team_string += str(person) + "\n"
+#         print(team_string)
 
 
 # Mean and Rules tests
 
-# Tests the teams and stores the scores in a dictionary {score, team}
+# Tests the teams and stores the scores in a dictionary {score, team} only if all tests pass
 for team in teams:
     rules_result = tester.test_rules(team)
     if rules_result == 0:
