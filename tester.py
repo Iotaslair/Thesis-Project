@@ -84,4 +84,14 @@ def test_rules(team):
         else:
             pass
 
+    # Tests that people have low self reliance
+    # Came from: What Makes A Great Software Engineer?
+    # With wanting SEs to Ask for help
+    for person in team:
+        if person.work_ethic["self reliance"] <= 3:
+            tests_failed += 1
+            break
+        else:
+            pass
+
     return tests_failed
