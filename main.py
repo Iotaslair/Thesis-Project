@@ -1,6 +1,7 @@
 import pims
 import itertools
 import tester
+from math import factorial as fac
 
 number_of_people_to_create = 10
 team_size = 3
@@ -57,6 +58,9 @@ best_team_dict = {}
 # Mean and Rules tests
 
 # Tests the teams and stores the scores in a dictionary {score, team} only if all tests pass
+num_of_teams = fac(len(people)) / fac(team_size) / fac((len(people) - team_size))
+
+print("Testing " + format(int(num_of_teams), ",d") + " teams so you don't have to :)\n")
 for team in teams:
     rules_result = tester.test_rules(team)
     if rules_result == 0:
