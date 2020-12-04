@@ -61,8 +61,14 @@ best_team_dict = {}
 num_of_teams = fac(len(people)) / fac(team_size) / fac((len(people) - team_size))
 
 print("Testing " + format(int(num_of_teams), ",d") + " teams so you don't have to :)\n")
+teams_tested = 0
+first_time_through = True
 for team in teams:
+    teams_tested = teams_tested + 1
     rules_result = tester.test_rules(team)
+    if teams_tested > num_of_teams / 2 and first_time_through:
+        print("50% though the teams")
+        first_time_through = False
     if rules_result == 0:
         score = tester.test_mean(team, team_size)
         best_team_dict[score] = team
