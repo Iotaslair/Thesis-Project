@@ -87,5 +87,6 @@ for i in range(top_x_teams):
     team_string = ""
     for person in best_team_dict[scores[i]]:
         team_string += str(person) + "\n"
-    print("Score: " + str(scores[i]))
+    print("Score: " + "{:.2f}".format(scores[i]))
+
     print(team_string)
