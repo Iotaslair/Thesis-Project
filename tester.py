@@ -77,6 +77,7 @@ def test_rules(team):
 
     # Tests that people have low Neuroticism
     # Came from: The Big Five Personality Dimensions and Job Performance: A Meta-Analysis
+    # Actually goes against The Big Five Personality Dimensions and Job Performance: A Meta-Analysis
     for person in team:
         if person.personality["neuroticism"] < 4:
             tests_failed += 1
