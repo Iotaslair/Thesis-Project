@@ -68,6 +68,7 @@ def test_rules(team):
     # Came from: Conscientiousness and Performance of Sales Representatives: Test of the
     # Mediating Effects of Goal Setting
     # and The Big Five Personality Dimensions and Job Performance: A Meta-Analysis
+    # and Personality and Team Performance: A Meta-Analysis
     for person in team:
         if person.personality["conscientiousness"] < 6:
             tests_failed += 1
@@ -94,5 +95,11 @@ def test_rules(team):
             break
         else:
             pass
+
+    # Write a test that makes sure there is high agreeableness and everyone has agreeableness above a certain amount
+    # Came from: Personality and Team Performance: A Meta-Analysis
+    # So having everyone be high is a good thing
+    # Also want to make a test to test the average conscientiousness score is high as well based on the same paper
+
 
     return tests_failed
