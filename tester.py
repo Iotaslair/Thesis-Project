@@ -10,13 +10,13 @@ def test_mean(team, team_size):
     }
 
     work_ethic_perfect = {
-        "centrality of work": 2.5,
-        "self reliance": 1.5,
+        "centrality of work": 3,
+        "self reliance": 3.5,
         "hard work": 4,
         "leisure": 4,
-        "morality": 2.5,
-        "delay of gratification": 3,
-        "wasted time": 2.5
+        "morality": 3.5,
+        "delay of gratification": 4,
+        "wasted time": 4
     }
     # Goes through each key in personality, gets the mean for this specific team and subtracts it from the perfect
     # value for that trait
