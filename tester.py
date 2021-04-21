@@ -89,8 +89,12 @@ def test_rules(team):
     # Tests that people have low self reliance
     # Came from: What Makes A Great Software Engineer?
     # With wanting SEs to Ask for help
+
+    # Interviews with SEs said that having high self reliance
+    # is a good thing but not to the point that they don't ask for help
+
     for person in team:
-        if person.work_ethic["self reliance"] <= 3:
+        if person.work_ethic["self reliance"] >= 3 && person.work_ethic["self reliance"] < 5:
             tests_failed += 1
             break
         else:
