@@ -2,15 +2,15 @@ def test_mean(team, team_size):
     diff_from_theory_best_team = 0
 
     personality_perfect = {
-        "openness": 7,
+        "openness": 8,
         "conscientiousness": 9,
         "extroversion": 5,
-        "agreeableness": 7,
+        "agreeableness": 8,
         "neuroticism": 1
     }
 
     work_ethic_perfect = {
-        "centrality of work": 3,
+        "centrality of work": 4,
         "self reliance": 3.5,
         "hard work": 4,
         "leisure": 4,
