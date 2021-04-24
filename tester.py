@@ -18,6 +18,7 @@ def test_mean(team, team_size):
         "delay of gratification": 4,
         "wasted time": 4
     }
+
     # Goes through each key in personality, gets the mean for this specific team and subtracts it from the perfect
     # value for that trait
     for key in team[0].personality:
