@@ -31,15 +31,14 @@ def test_mean(team, team_size):
 
 
 def mean(team, p_trait, w_trait, team_size):
+    value = 0
     if w_trait is None:
-        # Calculating mean of Personality Trait
-        value = 0
+        # Calculating mean of the Personality Trait
         for person in team:
             value += person.personality[p_trait]
         return value / team_size
     else:
-        # Calculating mean of Work Ethic Trait
-        value = 0
+        # Calculating mean of the Work Ethic Trait
         for person in team:
             value += person.work_ethic[w_trait]
         return value / team_size
