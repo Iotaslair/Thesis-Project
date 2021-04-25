@@ -3,8 +3,8 @@ import itertools
 import tester
 from math import factorial as fac
 
-number_of_people_to_create = 10
-team_size = 3
+number_of_people_to_create = 35
+team_size = 5
 top_x_teams = 3
 
 people = []
