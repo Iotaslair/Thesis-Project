@@ -95,7 +95,7 @@ def test_rules(team):
     # is a good thing but not to the point that they don't ask for help
 
     for person in team:
-        if person.work_ethic["self reliance"] >= 3 && person.work_ethic["self reliance"] < 5:
+        if 3 <= person.work_ethic["self reliance"] < 5:
             tests_failed += 1
             break
         else:
